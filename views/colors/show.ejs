@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show</title>
+</head>
+
+<body bgcolor = <%=c.hex%> >
+    
+    <h1><%=c.name %></h1>
+    <h2><%=c.hex %></h2>
+
+    <form action="/colors/<%=c.id%>?_method=DELETE" method="POST">
+    <button>Delete Color</button>
+    </form> 
+
+    <a href="/colors">Back to all of your colors</a>
+    <a href="/colors/<%=c._id %>/edit">Edit</a>
+
+</body>
+</html>

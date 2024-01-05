@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body>
+    <h1>Make a cool color</h1>
+    <form action="/colors/<%=c.id%>?_method=PUT" method="POST">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" value="<%=c.name%>">
+        </div>
+        <div>
+            <label for="hex">HEX Code</label>
+            <input type="color" name="hex" id="hex" value="<%=c.hex%>">
+        </div>
+        <button>Update Color</button>
+        <a href="/colors/<%= c._id %>"> Cancel</a>
+    </form>
+
+</body>
+</html>
